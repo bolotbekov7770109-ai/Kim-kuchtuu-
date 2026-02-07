@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+  <meta charset="UTF-8">
+  <title>Аркан Тартыш | Онлайн</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>🪢 Онлайн Аркан Тартыш</h2>
+
+<div class="card">
+
+  <div class="lang">
+    <button onclick="setLang('ky')">🇰🇬 Кыргызча</button>
+    <button onclick="setLang('ru')">🇷🇺 Русский</button>
+  </div>
+
+  <input id="name" placeholder="Атыңды жаз">
+  <p>Аватар тандаңыз:</p>
+  <div class="avatars">
+    <img src="avatars/mickey.png" alt="Mickey" onclick="selectAvatar('mickey.png', event)">
+    <img src="avatars/minnie.png" alt="Minnie" onclick="selectAvatar('minnie.png', event)">
+    <img src="avatars/spongebob.png" alt="SpongeBob" onclick="selectAvatar('spongebob.png', event)">
+    <img src="avatars/pikachu.png" alt="Pikachu" onclick="selectAvatar('pikachu.png', event)">
+  </div>
+
+  <button onclick="joinGame()">Оюнга кошулуу</button>
+
+  <p id="room"></p>
+  <p id="question">Күтүңүз...</p>
+
+  <div class="rope-box">
+    <span id="p1">👤 Оюнчу 1</span>
+    <div id="rope">|</div>
+    <span id="p2">👤 Оюнчу 2</span>
+  </div>
+
+  <input id="answer" placeholder="Жоопту жаз">
+  <button onclick="sendAnswer()">Жооп берүү</button>
+
+  <p id="info"></p>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
